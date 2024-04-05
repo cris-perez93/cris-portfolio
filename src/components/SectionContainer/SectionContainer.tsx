@@ -1,18 +1,70 @@
-// src/components/SectionContainer.tsx
-import React from "react";
 
 interface SectionContainerProps {
   title: string;
+  handleSectionClick: (section: string) => void;
+  activeSection: string;
+  currentProject?: string;
+  setCurrentProject: (project: string) => void;
 }
 
-const SectionContainer: React.FC<SectionContainerProps> = ({ title }) => {
+
+const SectionContainer = ({
+  title,
+  handleSectionClick,
+  activeSection,
+  currentProject,
+  setCurrentProject 
+}: SectionContainerProps) => {
+ 
   return (
     <>
-      <div
-        className={` flex  flex-col bg-white  sectionContainer   z-20 items-center w-[300px]  relative p-10 cursor-pointer shadow-md rounded-lg border border-gray-50 transition-transform duration-300 ease-in-out  hover:shadow-lg`}
-      >
-        <div className="w-full text-center">{title}</div>
-      </div>
+    <div
+      onClick={() => {
+        if (currentProject !== "") {
+          handleSectionClick('Projects');
+          setCurrentProject("");
+        } else {
+          handleSectionClick(title);
+        }
+      
+      }}
+      className={`sectionContainer flex items-center z-20 relative cursor-pointer transition-transform duration-300 ease-in-out ${
+        activeSection !== title && activeSection !== "" ? "unshow" : ""
+      }`}
+    >
+      {activeSection !== "" && (
+        <div
+          onClick={(e) => {
+            console.log("click");
+            if (currentProject !== "") {
+              handleSectionClick('Projects');
+              setCurrentProject("");
+            } else {
+              handleSectionClick("");
+            }
+            e.stopPropagation();
+          }}
+          className={`z-20 absolute sm:-left-10 -left-5 ${activeSection !== title ? "hidden" : ""}`}
+          id="arrowBack"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </div>
+      )}
+       <p className=" uppercase text-4xl font-semibold">{title}</p>
+    </div>
     </>
   );
 };

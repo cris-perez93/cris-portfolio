@@ -1,22 +1,20 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 interface ProjectWindowProps {
   imgUrl: string;
-  url: string;
   title: string;
   id: string;
   description: string;
+  handleProjectClick: (project: string) => void;
 }
 
 const ProjectWindow = ({
   imgUrl,
   title,
+  id,
   description,
- url,
+ handleProjectClick,
 }: ProjectWindowProps) => {
   const [showButton, setShowButton] = useState(false);
-  const navigate = useNavigate();
 
   // al hacer hover en el button dibujaremos una linea en la parte inferior del texto animada
   const onButtonHover = () => {
@@ -24,13 +22,10 @@ const ProjectWindow = ({
     if (!line) return;
     line.classList.add("underline-animation");
   };
-
-
   return (
     <div className="flex relative flex-col mt-5">
       <p className="mb-5 font-bold">{title}</p>
       <p className="text-sm">{description}</p>
-      {/* Envuelve la imagen y el botón en un div contenedor */}
       <div
         onMouseEnter={() => setShowButton(true)}
         onMouseLeave={() => setShowButton(false)}
@@ -45,12 +40,12 @@ const ProjectWindow = ({
           <img
             src={imgUrl}
             alt={title}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center" 
           />
         </div>
         {showButton && (
           <div
-            onClick={() =>  navigate(url)}
+            onClick={() =>  handleProjectClick(id)}
             onMouseEnter={onButtonHover}
             id="button-project"
             className="absolute cursor-pointer z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-3 flex justify-center items-center "

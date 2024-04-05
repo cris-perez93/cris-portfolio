@@ -47,10 +47,10 @@ const xAxisLabels = ["Ene", "Feb", "Mar", "Abr", "May",
 "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 
 return (
-    <div className='border p-10  rounded-md relative '>
-    <p className='absolute text-xs left-6 top-2'>Multiple line chart</p>
+    <div className='border sm:p-10 p-6 flex flex-col items-center  rounded-md relative '>
+    <p className=' text-xs left-6 mb-5'>Multiple line chart</p>
     <LineChart
-        width={450}
+        width={650}
         lineSets={lineSets} 
         xAxisLabels={xAxisLabels}
         lineToShowPointInfo={0} 
@@ -68,7 +68,7 @@ return (
 export default MultipleLine;
 
 export const MultipleLineCode = `
-import { LineChart } from 'linechart-test'; 
+import { LineChart } from 'simple-react-linechart'; 
 
 const MultipleLine = () => {
 const lineSets = [

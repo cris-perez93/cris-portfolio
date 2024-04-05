@@ -41,10 +41,10 @@ const customToolTip = (point:CustomToolTipData) => {
 }
 
 return (
-    <div className='border p-10  rounded-md relative '>
-    <p className='absolute text-xs left-6 top-2'>Custom Tooltip</p>
+    <div className='border bg-[#2c2c2c] flex flex-col items-center justify-center sm:p-10 p-6  rounded-md relative '>
+    <p className=' text-xs left-6 mb-5 text-white'>Custom Tooltip</p>
     <LineChart
-        width={450}
+        width={650}
         lineSets={lineSets} 
         xAxisLabels={xAxisLabels}
         lineToShowPointInfo={0}
@@ -63,8 +63,8 @@ return (
 export default CustomTooltipLineChart;
 
 export const CustomTooltipLineCode = `
-import { LineChart } from 'linechart-test';
-import { CustomToolTipData } from 'linechart-test/dist/cjs/types/src/components/LineChart/types';
+import { LineChart } from 'simple-react-linechart';
+import { CustomToolTipData } from 'simple-react-linechart/dist/cjs/types/src/components/LineChart/types';
 
 const CustomTooltipLineChart = () => {
 const lineSets = [

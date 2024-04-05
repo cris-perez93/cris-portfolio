@@ -32,9 +32,10 @@ const lineSets = [
 ];
 
 return (
-    <div className='border  px-10 pb-5 pt-14  rounded-md relative '>
-    <p className='absolute text-xs left-6 top-3'>Big data chart</p>
+    <div className='border flex flex-col items-center justify-center  sm:p-10 p-6 rounded-md relative '>
+    <p className=' text-xs left-6 mb-5'>Big data chart</p>
     <LineChart
+        width={850}
         hideXlabels={true}
         lineSets={lineSets} 
         lineToShowPointInfo={0}
@@ -48,7 +49,7 @@ return (
 
 export default BigDataLineChart;
 export const BigDataLineCode = `
-import { LineChart } from 'linechart-test'; 
+import { LineChart } from 'simple-react-linechart'; 
 
 const BigDataLineChart = () => {
     const createYearlyRandomData = () => {

@@ -27,10 +27,10 @@ const xAxisLabels = ["Ene", "Feb", "Mar", "Abr", "May",
 "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 
 return (
-    <div className='border p-10  rounded-md relative '>
-    <p className='absolute text-xs left-6 top-2'>Simple line chart</p>
+    <div className='border sm:p-10 p-6 flex flex-col items-center  rounded-md relative '>
+    <p className=' text-xs left-6  mb-5'>Simple line chart</p>
     <LineChart
-        width={450}
+        width={650}
         lineSets={lineSets} 
         xAxisLabels={xAxisLabels}
         lineToShowPointInfo={0} 
@@ -49,7 +49,7 @@ export default SimpleLine;
 
 
 export const SimpleLineCode = `
-import { LineChart } from 'linechart-test';
+import { LineChart } from 'simple-react-linechart';
 
 const SimpleLine = () => {
     const lineSets = [

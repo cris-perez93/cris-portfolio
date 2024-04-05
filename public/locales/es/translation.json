@@ -1,0 +1,44 @@
+{
+  "hey": "!Hola! 😁",
+  "headerDescription": "Soy desarrollador frontend apasionado por crear experiencias web únicas y atractivas. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.",
+  "projects": {
+    "title": "Proyectos",
+    "description": "Proyectos personales para demostrar mis habilidades y conocimientos.",
+    "resume": {
+      "title": "Resume-inline",
+      "description": "Inicialmente concebido como un proyecto personal, con el objetivo de aprender nuevas tecnologías y mejorar mis habilidades como desarrollador frontend. Es una aplicación web que permite a los usuarios crear su currículum de manera rápida y sencilla interactuando con una interfaz amigable.",
+      "go": "Ir al proyecto"
+    },
+    "chart": {
+      "title": "Libreria de Gráficos",
+      "description": "Libreria de gráficos de líneas construida con React. Es una biblioteca simple y fácil de usar que te permite crear gráficos de líneas. Está diseñada para ser flexible y personalizable, para que puedas adaptarla fácilmente a tus necesidades.",
+      "install": "Instalación vía npm"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "resume": "Descargar CV",
+    "skillsDescription": "Amplia experiencia en tecnologías de frontend, complementada por un sólido historial en el desarrollo de aplicaciones web de alto rendimiento y el diseño de interfaces de usuario intuitivas. Destacando una especialización en la implementación de React para la ingeniería de sistemas ERP farmacéuticos robustos, demostrando un enfoque agudo en optimizar la eficiencia del flujo de trabajo y la gestión de datos."
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Puedes contactarme a través del siguiente formulario o vía:",
+    "go": "Enviar",
+    "success": "Mensaje enviado con éxito",
+    "error": "Ocurrió un error al enviar el mensaje",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "validation": {
+      "name": "Por favor, introduce tu nombre",
+      "email": "Por favor, introduce un correo electrónico",
+      "emailFormat": "Por favor, introduce un correo electrónico válido",
+      "message": "Por favor, introduce un mensaje"
+    }
+  },
+  "nav": {
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}

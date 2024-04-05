@@ -1,58 +1,81 @@
-import { useRef, useState } from "react";
 import HomeScreen from "./pages/HomeScreen";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
-import { gsap } from 'gsap';
+import SpainFlag from "./assets/spain.png";
+import UkFlag from "./assets/united-kingdom.png";
 import ChartsView from "./components/ChartsView";
+import { SECTIONS } from "./constants/sections";
+import { useTranslation } from "react-i18next";
 
-function App() {
-  const [activeSection, setActiveSection] = useState<string>("");
-  const contentRef = useRef(null);
-  const handleSectionClick = (section: string) => {
-    // evitar el scroll al top de la pagina
-    if (contentRef.current) {
-      // Anima la altura del contenedor a 0 o un valor mínimo
-      gsap.to(contentRef.current, {
-        translateY: 60,
-        display: "none",
-        opacity: 0,
-        overflow: "hidden",
-        duration: 0.2,
-        ease: "power2.in",
-        onComplete: () => {
-          // Cambia la sección activa después de completar la animación de cierre
-          setActiveSection(section);
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  
+  const { i18n, t } = useTranslation();
 
-          // Opcional: Expande el contenedor para el nuevo contenido
-          // Esto puede requerir medir la altura del nuevo contenido de alguna manera
-          gsap.to(contentRef.current, {
-            translateY: 0,
-            display: "block",
-            overflow: "hidden",
-            opacity: 1,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-        },
+  const onChangeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  }
+
+  const onScroll = (id:string, offset = 20) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Calcular la posición del elemento respecto al documento
+      let elementPosition = element.getBoundingClientRect().top + window.scrollY;
+  
+      // Ajustar el desplazamiento para considerar elementos fijos, como un header
+      elementPosition -= offset; // Ajusta este valor según la altura de tu header o cualquier otro elemento
+  
+      // Realizar el desplazamiento
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
       });
     }
-
-    // scroll to top of the page with animation
   };
 
+
+  return (
+    <>
+    <header className="fixed left-0 top w-full bg-[#f6f6f6] z-50 flex justify-center sm:justify-end items-end">
+      <nav className="flex gap-5 px-10 py-2">
+        {SECTIONS.map((section) => (
+          <li
+            key={section.id}
+            onClick={() => onScroll(section.id)}
+            className="list-none cursor-pointer"
+          >
+            {t(section.title)}
+          </li>
+        ))}
+      </nav>
+      <div id="flags-language" className="flex gap-2 absolute -bottom-10 right-10">
+        <img 
+          onClick={() => onChangeLanguage("en")}
+          src={UkFlag} alt="uk" 
+          className="w-5 h-5 cursor-pointer" />
+        <img
+          onClick={() => onChangeLanguage("es")} 
+          src={SpainFlag} 
+          alt="spain" 
+          className="w-5 h-5 cursor-pointer" />
+
+      </div>
+      </header>
+      <main>{children}</main>
+      <footer></footer>
+      </>
+    
+  );
+}
+
+
+function App() {
   return (
     <Router>
-       <Nav
+      {/* <Nav
           handleSectionClick={handleSectionClick}
-        />
+        /> */}
       <Routes>
-       
-        <Route path="/" element={<HomeScreen
-          activeSection={activeSection}
-          handleSectionClick={handleSectionClick}
-          contentRef={contentRef}
-        />} />
-        <Route path="/charts" element={<ChartsView />} />
+        <Route path="/" element={<Layout><HomeScreen /></Layout>} />
+        <Route path="/charts" element={<Layout><ChartsView/></Layout>} />
       </Routes>
     </Router>
   );

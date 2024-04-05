@@ -5,6 +5,7 @@
 * {
     font-family: "Inter";
   }
+ 
 
   /* src/styles/homeAnimation.module.css */
 .container {
@@ -23,15 +24,13 @@
 }
 
 .profession {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  animation: slideIn 3s ease-in-out;
+  animation: slideIn 2s ease-in-out;
 }
 
 .description {
   font-size: 1rem;
   margin-top: 1rem;
-  animation: slideIn 4s ease-in-out;
+  animation: slideIn 2s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -51,12 +50,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideIn 1s ease-out forwards;
   animation-delay: 0.5s;
-  overflow: hidden;
 }
-.sectionContainer:hover {
-  transform: translateY(0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
+
 
 @keyframes fadeInUp {
   to {
@@ -76,6 +71,12 @@
   display: none;
   animation: fadeIn 0.3s ease-in-out;
 }
+
+.fadeIn {
+  opacity: 1;
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
 @keyframes fadeIn {
   from {
     display: block;
@@ -88,6 +89,25 @@
   }
 }
 
+
+/* fadeIn y fadeOut para el cambio de estado */
+@keyframes fadeInButton {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutButton {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fadeInButton {
+  animation: fadeInButton 0.5s forwards;
+}
+
+.fadeOutButton {
+  animation: fadeOutButton 0.5s forwards;
+}
 
 
 .underline-animation {
@@ -143,4 +163,85 @@ html{
   background: #ffffff;
   border-radius: 6px;
   box-shadow: inset 0px 0px 5px white;
+}
+
+/* Ajustamos la animación para que solo controle opacidad y transformación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.show2 {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.unshow {
+  animation: fadeOutDown 0.8s ease-in-out forwards;
+}
+
+#sections {
+  position: -webkit-sticky; /* Para compatibilidad con Safari */
+  position: sticky;
+  padding-block: 10px;
+  top: 0; /* Ajusta esto según necesites, 0 para que se pegue al tope del viewport */
+  z-index: 10; /* Asegúrate de que se muestre por encima de otros contenidos */
+  background-color: #ffffff;
+}
+
+/* About.css */
+.about-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.timeline-section {
+  margin-bottom: 50px;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* styles.css o componente About.css */
+.write-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+
+/* Estilos adicionales para los títulos, texto y animaciones */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 6px;
+  aspect-ratio: 1;
+  background: #656565;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: l6 1s infinite linear alternate;
+}
+@keyframes l6 {
+    0%  {box-shadow: 15px 0,-25px 0}
+    50% {box-shadow: 15px 0,-15px 0}
+    100%{box-shadow: 25px 0,-15px 0}
 }

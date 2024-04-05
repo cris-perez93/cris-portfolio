@@ -1,0 +1,44 @@
+{
+  "hey": "Hey there 👋",
+  "headerDescription": "I'm a frontend developer who loves crafting beautiful and performant web experiences. My journey in the world of web development has been nothing short of amazing.",
+  "projects": {
+    "title": "Projects",
+    "description": "Here are a few projects I've worked on recently. Want to see more? Email me.",
+    "resume": {
+      "title": "Resume-inline",
+      "description": "Initially, it is conceived as a personal project, with the aim of learning new technologies and improving my skills as a frontend developer. It is a web application that allows users to create their resume quickly and easily by interacting with a user-friendly interface.",
+      "go": "Get in touch"
+    },
+    "chart": {
+      "title": "Chart Library",
+      "description": "Line chart library built with React. It is a simple and easy-to-use library that allows you to create beautiful and interactive line charts. It is designed to be flexible and customizable, so you can easily adapt it to your needs.",
+      "install": "Installing via npm"
+    }
+  },
+  "about": {
+    "resume": "Get my resume",
+    "title": "About me",
+    "skillsDescription": "Profound expertise in frontend technologies, complemented by a solid track record in developing high-performance web applications and crafting intuitive user interfaces. Boasts a specialization in deploying React for the engineering of robust pharmaceutical ERP systems, demonstrating a keen focus on optimizing workflow efficiency and data management."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "You can contact me through the following form or via :",
+    "go": "Send",
+    "success": "Message sent successfully",
+    "error": "An error occurred while sending the message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "validation": {
+      "name": "Name is required",
+      "email": "Email is required",
+      "emailFormat": "Email is not valid",
+      "message": "Message is required"
+    }
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
