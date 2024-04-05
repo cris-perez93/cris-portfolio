@@ -1,26 +1,4 @@
 
-// funcion que crea un array de objetos con las propiedades x y y para generar un grafico random con 500 objetos desde 0 hasta 100 gradualmente
-const createRandomDataDay = () => {
-  const data = [];
-  let lastY = Math.random() * 50 + 50; // Inicializamos con un valor aleatorio entre 50 y 100
-
-  for (let i = 0; i < 1440; i++) { // Supongamos que generamos datos para cada minuto de un día
-    const deltaY = (Math.random() - 0.5) * 10; // Variación aleatoria entre -5 y 5
-    lastY += deltaY; // Añadimos la variación al último valor
-
-    // Simulamos una corrección si el precio se desvía demasiado (para evitar valores negativos o excesivamente altos)
-    if (lastY < 10) lastY += Math.random() * 10;
-    if (lastY > 100) lastY -= Math.random() * 10;
-
-    data.push({
-      x: i, // Suponiendo 'i' como cada minuto del día
-      y: Math.floor(lastY),
-    });
-  }
-  return data;
-};
-
-
 export const LINE_SETS = [
   {
     data: [
