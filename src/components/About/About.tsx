@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import ImageCris from "../../assets/cris_about.jpg";
 import { useTranslation } from "react-i18next";
 import { ABOUT_ME_EN, ABOUT_ME_ES } from "./constants/about";
+import documentPDF from './../../assets/resumepdf.pdf'
 
 const SKILLS = [
 
@@ -95,6 +96,7 @@ const About: React.FC = () => {
   const [aboutDescription, setAboutDescription] = useState<string>("");
   const { t } = useTranslation();
 
+
   useEffect(() => {
     if (i18n.language) {
       setAboutDescription(i18n.language === "en" ? ABOUT_ME_EN : ABOUT_ME_ES);
@@ -118,11 +120,15 @@ const About: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: aboutDescription }}
           className="leading-normal">
           </p>
-          <p 
-           onClick={() => console.log("Get my resume")}
-          className=" bg-gray-100 shadow-md w-max p-2 rounded-md mt-5 cursor-pointer hover:bg-gray-200">
+          <div className=" bg-gray-100  shadow-md w-max p-2 rounded-md mt-5 cursor-pointer hover:bg-gray-200">
+          <a
+            href={documentPDF}
+            target="_blank"
+            rel="noreferrer"
+            >
             {t('about.resume')}
-          </p>
+          </a>
+          </div>
         </div>
         <img src={ImageCris} alt="profile" className=" hidden rounded-lg w-1/2 xl:w-full xl:block" />
       </div>
@@ -149,8 +155,6 @@ const About: React.FC = () => {
             {t('about.skillsDescription')}
           </p>
           </div>
-          
-          
           </div>
       </div>
     </div>

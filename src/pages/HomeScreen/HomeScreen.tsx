@@ -70,15 +70,15 @@ const HomeScreen = () => {
         className={"w-full show sm:p-20 p-5 bg-[#f6f6f6] flex justify-center"}
       >
         <div className=" flex  md:max-w-[1200px] sm:px-20 md:flex-row flex-col-reverse justify-between">
-          <div className=" md:w-2/4">
+          <div className=" md:w-2/4 flex flex-col gap-2">
             <p className=" bg-gray-50 shadow-md p-2 font-bold rounded-md w-max ">
               {t('hey')}
             </p>
-            <h1 className="name font-extrabold ">Meet Cristian Pérez</h1>
-            <p className="profession tracking-widest uppercase    ">
+            <h1 className=" font-extrabold text-2xl ">Meet Cristian Pérez</h1>
+            <p className=" tracking-widest uppercase    ">
               Frontend Developer
             </p>
-            <p className="description md:text-md !text-[14px]">
+            <p className=" md:text-md !text-[14px]">
               {t('headerDescription')}
             </p>
           </div>
