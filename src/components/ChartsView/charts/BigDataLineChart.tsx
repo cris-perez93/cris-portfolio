@@ -1,4 +1,4 @@
-import { LineChart } from 'linechart-test'; 
+import { LineChart } from 'simple-react-linechart'; 
 
 const BigDataLineChart = () => {
     const createYearlyRandomData = () => {
@@ -32,10 +32,10 @@ const lineSets = [
 ];
 
 return (
-    <div className='border flex flex-col items-center justify-center  sm:p-10 p-6 rounded-md relative '>
+    <div className='border flex flex-col items-center justify-center  sm:p-10 pt-2 rounded-md relative '>
     <p className=' text-xs left-6 mb-5'>Big data chart</p>
     <LineChart
-        width={850}
+        hideYlabels={true}
         hideXlabels={true}
         lineSets={lineSets} 
         lineToShowPointInfo={0}

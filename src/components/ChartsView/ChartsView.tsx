@@ -1,4 +1,4 @@
-import "linechart-test/dist/cjs/assets/index-UvnS4ki5.css";
+import "simple-react-linechart/dist/cjs/assets/index-UvnS4ki5.css";
 import LineCode from "./codes/LineCode";
 import SimpleLine, { SimpleLineCode } from "./charts/SimpleLineChart";
 import MultipleLine, { MultipleLineCode } from "./charts/MultipleLineChart";

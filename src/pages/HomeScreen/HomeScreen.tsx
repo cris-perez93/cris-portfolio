@@ -101,7 +101,7 @@ const HomeScreen = () => {
             {PROJECTS.map((project) => (
               <div
                 key={project.id}
-                className={`flex  p-5 rounded-md shadow-md ${project.componentView ? "flex-col": 'md:flex-row flex-col gap-2 justify-center'} mt-10`}
+                className={`flex  sm:p-5 rounded-md sm:shadow-md ${project.componentView ? "flex-col": 'md:flex-row flex-col gap-2 justify-center'} mt-10`}
               >
                 <div className="sm:pr-10 gap-5 sm:gap-0  flex flex-col sm:justify-between justify-center items-center sm:items-start">
                   <h1 className="font-bold mb-2 text-xl text-center sm:text-start">{t(project.title)}</h1>
