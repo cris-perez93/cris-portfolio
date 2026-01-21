@@ -13,6 +13,11 @@
       "title": "Chart Library",
       "description": "Line chart library built with React. It is a simple and easy-to-use library that allows you to create beautiful and interactive line charts. It is designed to be flexible and customizable, so you can easily adapt it to your needs.",
       "install": "Installing via npm"
+    },
+    "esphin": {
+      "title": "Esphin",
+      "description": "Portfolio for my personal software consultancy project. We offer application development, custom solutions, and digital transformation for businesses.",
+      "go": "Visit Site"
     }
   },
   "about": {
@@ -22,7 +27,7 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "You can contact me through the following form or via :",
+    "description": "Feel free to reach out for collaborations or just a friendly hello!",
     "go": "Send",
     "success": "Message sent successfully",
     "error": "An error occurred while sending the message",

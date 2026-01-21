@@ -13,6 +13,11 @@
       "title": "Libreria de Gráficos",
       "description": "Libreria de gráficos de líneas construida con React. Es una biblioteca simple y fácil de usar que te permite crear gráficos de líneas. Está diseñada para ser flexible y personalizable, para que puedas adaptarla fácilmente a tus necesidades.",
       "install": "Instalación vía npm"
+    },
+    "esphin": {
+      "title": "Esphin",
+      "description": "Portfolio para mi proyecto personal de consultoría de software. Ofrecemos desarrollo de aplicaciones, soluciones a medida y transformación digital para empresas.",
+      "go": "Visitar Sitio"
     }
   },
   "about": {
@@ -22,7 +27,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "description": "Puedes contactarme a través del siguiente formulario o vía:",
+    "description": "Siéntete libre de contactarme para colaboraciones o simplemente para saludar.",
     "go": "Enviar",
     "success": "Mensaje enviado con éxito",
     "error": "Ocurrió un error al enviar el mensaje",
