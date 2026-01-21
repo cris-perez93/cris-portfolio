@@ -4,6 +4,7 @@
   "projects": {
     "title": "Proyectos",
     "description": "Proyectos personales para demostrar mis habilidades y conocimientos.",
+    "moreComingSoon": "Más proyectos emocionantes próximamente...",
     "resume": {
       "title": "Resume-inline",
       "description": "Inicialmente concebido como un proyecto personal, con el objetivo de aprender nuevas tecnologías y mejorar mis habilidades como desarrollador frontend. Es una aplicación web que permite a los usuarios crear su currículum de manera rápida y sencilla interactuando con una interfaz amigable.",

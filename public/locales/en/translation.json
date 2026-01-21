@@ -4,6 +4,7 @@
   "projects": {
     "title": "Projects",
     "description": "Here are a few projects I've worked on recently. Want to see more? Email me.",
+    "moreComingSoon": "More exciting projects coming soon...",
     "resume": {
       "title": "Resume-inline",
       "description": "Initially, it is conceived as a personal project, with the aim of learning new technologies and improving my skills as a frontend developer. It is a web application that allows users to create their resume quickly and easily by interacting with a user-friendly interface.",
