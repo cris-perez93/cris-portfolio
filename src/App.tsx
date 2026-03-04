@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import HomeScreen from "./pages/HomeScreen";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ChartsView from "./components/ChartsView";
@@ -7,12 +8,21 @@ import { useTranslation } from "react-i18next";
 const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const { i18n, t } = useTranslation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const onChangeLanguage = (language: string) => {
     i18n.changeLanguage(language);
   }
 
-  const onScroll = (id: string, offset = 20) => {
+  const onScroll = (id: string, offset = 0) => {
     const element = document.getElementById(id);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
@@ -23,10 +33,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-6 bg-white/80 backdrop-blur-md transition-all duration-300">
+      <header className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-6 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent text-black'}`}>
         <div className="font-bold text-xl tracking-tighter">CP.</div>
         <nav className="hidden md:flex gap-8">
           {SECTIONS.map((section) => (
@@ -45,7 +54,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <span onClick={() => onChangeLanguage("es")} className={`cursor-pointer ${i18n.language === 'es' ? 'text-black' : 'text-gray-400'}`}>ES</span>
         </div>
       </header>
-      <main className="pt-20">{children}</main>
+      <main>{children}</main>
       <footer className="py-10 text-center text-xs text-gray-400 uppercase tracking-widest">
         &copy; {new Date().getFullYear()} Cristian Pérez. All Rights Reserved.
       </footer>
