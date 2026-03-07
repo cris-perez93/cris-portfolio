@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HomeScreen from "./pages/HomeScreen";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ChartsView from "./components/ChartsView";
 import { useTranslation } from "react-i18next";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -41,7 +40,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout><HomeScreen /></Layout>} />
-        <Route path="/charts" element={<Layout><ChartsView /></Layout>} />
       </Routes>
     </Router>
   );
