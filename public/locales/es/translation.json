@@ -19,6 +19,11 @@
       "title": "Esphin",
       "description": "Portfolio para mi proyecto personal de consultoría de software. Ofrecemos desarrollo de aplicaciones, soluciones a medida y transformación digital para empresas.",
       "go": "Visitar Sitio"
+    },
+    "esphinCV": {
+      "title": "EsphinCV",
+      "description": "Constructor de currículums inteligente con IA. Importación de PDFs, optimización de secciones y plantillas premium para destacar profesionalmente.",
+      "go": "Crear mi CV"
     }
   },
   "about": {

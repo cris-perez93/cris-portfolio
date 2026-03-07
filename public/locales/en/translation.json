@@ -19,6 +19,11 @@
       "title": "Esphin",
       "description": "Portfolio for my personal software consultancy project. We offer application development, custom solutions, and digital transformation for businesses.",
       "go": "Visit Site"
+    },
+    "esphinCV": {
+      "title": "EsphinCV",
+      "description": "Smart AI-powered resume builder. PDF import, section optimization, and premium templates to stand out professionally.",
+      "go": "Create my CV"
     }
   },
   "about": {
