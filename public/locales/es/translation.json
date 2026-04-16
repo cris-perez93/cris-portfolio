@@ -1,9 +1,23 @@
 {
   "hey": "!Hola! 😁",
-  "headerDescription": "Soy desarrollador frontend apasionado por crear experiencias web únicas y atractivas. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.",
+  "headerDescription": "Creando experiencias digitales premium mediante diseño minimalista y código de alto rendimiento.",
+  "common": {
+    "swipeToExplore": "Desliza para explorar",
+    "scrollToExplore": "Scroll para explorar",
+    "portfolioYear": "Portfolio 2026",
+    "go": "Ir",
+    "visit": "Visitar Sitio"
+  },
+  "nav": {
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
   "projects": {
-    "title": "Proyectos",
-    "description": "Proyectos personales para demostrar mis habilidades y conocimientos.",
+    "title": "Trabajos",
+    "selectedCases": "Casos Seleccionados",
+    "featuredProjects": "Proyectos Destacados",
+    "description": "Una colección de soluciones digitales donde el diseño se une a la funcionalidad para crear experiencias de impacto.",
     "moreComingSoon": "Más proyectos emocionantes próximamente...",
     "resume": {
       "title": "Resume-inline",
@@ -26,30 +40,33 @@
       "go": "Crear mi CV"
     }
   },
+  "skills": {
+    "title": "Skills",
+    "areaOfFocus": "Áreas de Enfoque",
+    "technicalArsenal": "Arsenal Técnico",
+    "description": "Un stack curado de tecnologías modernas enfocadas en el rendimiento, escalabilidad y diseño pixel-perfect.",
+    "frontend": "Desarrollo Front",
+    "backend": "Desarrollo Back",
+    "mobile": "Mobile",
+    "testing": "Testing"
+  },
   "about": {
-    "title": "Sobre mí",
+    "title": "Acerca de",
+    "digitalAlchemist": "Alquimista Digital",
+    "buildingFutures": "Construyendo Futuros",
     "resume": "Descargar CV",
-    "skillsDescription": "Amplia experiencia en tecnologías de frontend, complementada por un sólido historial en el desarrollo de aplicaciones web de alto rendimiento y el diseño de interfaces de usuario intuitivas. Destacando una especialización en la implementación de React para la ingeniería de sistemas ERP farmacéuticos robustos, demostrando un enfoque agudo en optimizar la eficiencia del flujo de trabajo y la gestión de datos."
+    "skillsDescription": "Amplia experiencia en tecnologías de frontend, complementada por un sólido historial en el desarrollo de aplicaciones web de alto rendimiento y el diseño de interfaces de usuario intuitivas."
   },
   "contact": {
     "title": "Contacto",
-    "description": "Siéntete libre de contactarme para colaboraciones o simplemente para saludar.",
-    "go": "Enviar",
+    "availableForProjects": "Disponible para proyectos",
+    "letsTalkDesign": "Hablemos de diseño",
+    "description": "¿Tienes un proyecto en mente? Construyamos algo extraordinario juntos.",
+    "email": "Email",
+    "social": "Social",
+    "info": "Basado en Barcelona, ES / Abierto a remoto",
     "success": "Mensaje enviado con éxito",
     "error": "Ocurrió un error al enviar el mensaje",
-    "name": "Nombre",
-    "email": "Correo Electrónico",
-    "message": "Mensaje",
-    "validation": {
-      "name": "Por favor, introduce tu nombre",
-      "email": "Por favor, introduce un correo electrónico",
-      "emailFormat": "Por favor, introduce un correo electrónico válido",
-      "message": "Por favor, introduce un mensaje"
-    }
-  },
-  "nav": {
-    "about": "Acerca de",
-    "projects": "Proyectos",
-    "contact": "Contacto"
+    "name": "Nombre"
   }
 }
